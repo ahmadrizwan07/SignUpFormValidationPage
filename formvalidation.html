@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- font awesome cdn link -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.0/css/all.min.css"
+      integrity="sha512-DxV+EoADOkOygM4IR9yXP8Sb2qwgidEmeqAEmDKIOfPRQZOWbXCzLC6vjbZyy0vPisbH2SyW27+ddLVCN+OMzQ=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+
+    <!-- style css link -->
+    <link rel="stylesheet" href="formvalidation.css" />
+    <title>Form Validation | JavaScript</title>
+  </head>
+  <body>
+    <div class="container">
+      <div class="box">
+        <header class="signup-header">
+          <h1>SignUp</h1>
+        </header>
+
+        <main class="signup-body">
+          <form action="#">
+            <p>
+              <label for="name">Full Name:</label>
+              <input type="text" placeholder="Username" id="name" />
+              <i class="fa-solid fa-user"></i>
+              <span id="nameError"></span>
+            </p>
+
+             <p>
+              <label for="email">Email:</label>
+              <input type="email" placeholder="xyz@gmail.com" id="email" />
+              <i class="fa-solid fa-envelope"></i>
+              <span id="emailError"></span>
+            </p>
+
+             <p>
+              <label for="password">Password:</label>
+              <input type="password" placeholder="Atleast 8 character" id="password" min="8" max="20" />
+              <i class="fa-solid fa-eye" id="eye" onclick="hidePass()"></i>
+              <i class="fa-solid fa-eye-slash" id="eye-slash" onclick="showPass()"></i>
+              <span id="passError"></span>
+            </p>
+
+            <p>
+              <label for="conPassword">Confirm Password:</label>
+              <input type="password" placeholder="Confirm password" id="conPassword" min="8" max="20" />
+              <i class="fa-solid fa-eye" id="again-eye" onclick="hideAgainPass()"></i>
+              <i class="fa-solid fa-eye-slash" id="againeyeslash" onclick="showAgainPass()"></i>
+              <span id="AgainPassError"></span>
+            </p>
+
+            <p>
+                <input type="submit" value="Create Account" id="submitBtn">
+            </p>
+          </form>
+        </main>
+
+        <footer class="signup-footer">
+            <p>
+                Already have an account? <a href="#">Login</a>
+            </p>
+        </footer>
+      </div>
+    </div>
+
+    <script src="formvalidation.js"></script>
+  </body>
+</html>
